@@ -13,15 +13,20 @@ var addBtn = document.querySelector('#add-btn')
 var valuesAfterAdd = document.querySelector('.values-after-add')
 addBtn.addEventListener('click', function(){
     var firstArr = valuesArr.textContent.split(',')
+    for (var i=0;i<firstArr.length;i++){
+        firstArr[i] = parseInt(firstArr[i])
+    }
     var checkSortUp = document.querySelector('#sort-up').checked 
     var checkSortDown = document.querySelector('#sort-down').checked 
     var numberPosition = document.querySelector('#number-position').value
     var valueAdd = document.querySelector('#value-add').value
     if (checkSortUp){
         var sortedArr = firstArr.sort()
+        console.log(sortedArr)
     }
     else if (checkSortDown){
         var sortedArr = firstArr.sort().reverse()
+        console.log(sortedArr)
     }
     else{
         var sortedArr = firstArr
