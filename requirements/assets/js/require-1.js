@@ -22,11 +22,9 @@ addBtn.addEventListener('click', function(){
     var valueAdd = document.querySelector('#value-add').value
     if (checkSortUp){
         var sortedArr = firstArr.sort()
-        console.log(sortedArr)
     }
     else if (checkSortDown){
         var sortedArr = firstArr.sort().reverse()
-        console.log(sortedArr)
     }
     else{
         var sortedArr = firstArr
