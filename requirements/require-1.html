@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao tác trên mảng</title>
+    <link rel="stylesheet" href="./assets/css/require-1.css">
+</head>
+<body>
+    <div id="main">
+        <h1>Thao tác trên mảng</h1>
+        <table>
+            <tr>
+                <td><button class="create-array-btn">Tạo mảng</button></td>
+                <td class="values-arr">34,53,45,34,23,56,45,67,43,10</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="values-after-add">Giá trị mảng sau khi xử lý</td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <input type="radio" id="sort-up" name="sort" value="Sắp xếp tăng">
+                    <label for="sort-up">Sắp xếp tăng</label>
+                    <input type="radio" id="sort-down" name="sort" value="Sắp xếp giảm">
+                    <label for="sort-down">Sắp xếp giảm</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <label for="">Thêm vào vị trí</label>
+                    <input type="number" id="number-position" name="position" min="1" max="20">
+                    <label for="">Giá trị</label>
+                    <input type="number" id="value-add" name="value" min="1" max="100">
+                    <input type="submit" id="add-btn" value="Thêm">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="./assets/js/require-1.js"></script>
+</body>
+</html>
