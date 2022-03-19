@@ -14,26 +14,25 @@ var valuesAfterAdd = document.querySelector('.values-after-add')
 addBtn.addEventListener('click', function(){
     var firstArr = valuesArr.textContent.split(',')
     for (var i=0;i<firstArr.length;i++){
-        firstArr[i] = parseInt(firstArr[i])
+        firstArr[i] = Number(firstArr[i].trim())
     }
-    var checkSortUp = document.querySelector('#sort-up').checked 
-    var checkSortDown = document.querySelector('#sort-down').checked 
     var numberPosition = document.querySelector('#number-position').value
     var valueAdd = document.querySelector('#value-add').value
-    if (checkSortUp){
-        var sortedArr = firstArr.sort()
+    if (document.querySelector('#sort-up').checked){
+        var sortedArr = firstArr.sort(function(a, b){return a - b})
     }
-    else if (checkSortDown){
-        var sortedArr = firstArr.sort().reverse()
+    else if (document.querySelector('#sort-down').checked){
+        var sortedArr = firstArr.sort(function(a, b){return a - b}).reverse()
     }
     else{
         var sortedArr = firstArr
     }
-    sortedArr.splice(numberPosition,0,valueAdd)
+    if (numberPosition && valueAdd)
+        sortedArr.splice(numberPosition,0,valueAdd)
     // Cách 2:
     // for (var i=firstArr.length; i>=numberPosition.value; i--){
     //     firstArr[i] = firstArr[i-1]
     // }
     // firstArr[numberPosition.value-1] = valueAdd.value
-    valuesAfterAdd.textContent = sortedArr
+    valuesAfterAdd.textContent = sortedArr.join(', ')
 })
