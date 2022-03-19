@@ -28,7 +28,7 @@ function setTime(){
         notifyText.style.fontSize = '80px'
     }
 }
-setInterval(setTime, 0)
+setInterval(setTime, 1000)
 
 function blinkEffect(){
     document.querySelector('#notify-text').style.color = 'black'
