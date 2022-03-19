@@ -11,6 +11,7 @@
 
 .values-after-add{
     color: red !important;
+    text-align: left !important;
 }
 
 h1{
