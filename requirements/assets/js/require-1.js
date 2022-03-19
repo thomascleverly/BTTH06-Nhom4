@@ -29,7 +29,7 @@ addBtn.addEventListener('click', function(){
     else{
         var sortedArr = firstArr
     }
-    sortedArr.splice(numberPosition-1,0,valueAdd)
+    sortedArr.splice(numberPosition,0,valueAdd)
     // Cách 2:
     // for (var i=firstArr.length; i>=numberPosition.value; i--){
     //     firstArr[i] = firstArr[i-1]
